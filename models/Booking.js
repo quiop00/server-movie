@@ -1,0 +1,33 @@
+const{Schema,model}=require("mongoose");
+const BookingSchema=new Schema({
+    username:{
+        type:String,
+        required:true
+    },
+    room:{
+        type:String
+    },
+    nameMovie:{
+        type:String
+    },
+    date:{
+        type:String
+    },
+    time:{
+        type:String
+    },
+    seat:{
+        type:Array
+    },
+    ticketPrice:{
+        type:String
+    },
+    foodPrice:{
+        type:String
+    },
+    tickCode:{
+        type:String
+    }
+});
+
+module.exports=model("booking",BookingSchema);
